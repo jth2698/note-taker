@@ -1,0 +1,29 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "a simple note taking app built with node and express",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jth2698/note-taker.git"
+  },
+  "keywords": [
+    "note",
+    "taker",
+    "server",
+    "express",
+    "node"
+  ],
+  "author": "James T. Howard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jth2698/note-taker/issues"
+  },
+  "homepage": "https://github.com/jth2698/note-taker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -19,12 +19,12 @@ app.use(express.json());
 
 // GET route to notes.html
 app.get("/notes", function (req, res) {
-    res.sendFile(path.join(__dirname, "/Develop/public/notes.html"));
+    res.sendFile(path.join(__dirname, "Develop/public/notes.html"));
 });
 
 // GET route to index.html
-app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "/Develop/public/index.html"));
+app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "Develop/public/index.html"));
 });
 
 // API Routes
@@ -32,7 +32,12 @@ app.get("*", function (req, res) {
 
 // GET route to db.json
 app.get("/api/notes", function (req, res) {
-    res.sendFile(path.join(__dirname, "/Develop/db/db.json"));
+    fs.readFile(path.join(__dirname, "Develop/db/db.json"), "utf8", (err, data) => {
+        if (err) {
+            throw err;
+        }
+        res.send(JSON.parse(data));
+    })
 });
 
 // POST route to db.json
@@ -43,14 +48,10 @@ app.post("/api/notes", function (req, res) {
     res.json(newNote);
 });
 
-// POST route to db.json
+// DELETE route to db.json
 
-// Send the "Add Character" form (the add.html file)
-app.get("/add", function (req, res) {
-    res.sendFile(path.join(__dirname, "add.html"));
-});
-
-// Displays all characters
-app.get("/api/characters", function (req, res) {
-    return res.json(characters);
+// Starts the server to begin listening
+// =============================================================
+app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
 });

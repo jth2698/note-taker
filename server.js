@@ -10,11 +10,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Sets the web root so express knows what directory to look in when serving static files - Only need to refer to `/` to reference (e.g. in the html file linking to a script source)
-app.use(express.static("Develop"));
+app.use(express.static("public"));
 
 // Routers
-require("./Develop/routes/apiRoutes")(app);
-require("./Develop/routes/htmlRoutes")(app);
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 // Listener
 app.listen(PORT, function () {

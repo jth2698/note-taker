@@ -1,6 +1,6 @@
 # Note Taker Application [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Screenshot of deployed application](image path)
+![Screenshot of deployed application](./note-taker-screenshot.jpg)
 
 ## Description
 
@@ -25,7 +25,7 @@ A simple web-deployed note taking application that uses node.js and the Express 
   
 ## Installation
 
-No installation needed. Users can visit <> to use this communal note-taking app.
+No installation needed. Users can visit <sleepy-wave-36988.herokuapp.com> to use this communal note-taking app.
 
 ## Usage
 

@@ -9,7 +9,7 @@ var PORT = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Sets the web root so express knows what firectory to look in when serving static files - Only need to refer to `/` to reference (e.g. in the html file linking to a script source)
+// Sets the web root so express knows what directory to look in when serving static files - Only need to refer to `/` to reference (e.g. in the html file linking to a script source)
 app.use(express.static("Develop"));
 
 // Routers

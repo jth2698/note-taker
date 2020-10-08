@@ -4,6 +4,8 @@
 
 <https://sleepy-wave-36988.herokuapp.com>
 
+## Screenshot
+
 ![Screenshot of deployed application](./note-taker-screenshot.jpg)
 
 ## Description
